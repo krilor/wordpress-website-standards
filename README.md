@@ -221,7 +221,7 @@ Search Engine Optimization
 
 ### Sitemap
 
-> The site **must** have a xml sitemap.
+> The site **must** have an xml sitemap.
 
 ### Breadcrumbs
 
@@ -250,7 +250,7 @@ While this can be handled on a policy level, it still makes sense to enforce it.
 
 ### Database Tables
 
-> Database tables **must** use a different prefix than _wp_.
+> Database tables **must** use a different prefix than _wp__.
 
 It might not stop an sophisticated threats, but because it is so simple to do, there is no reason to not do it.
 
