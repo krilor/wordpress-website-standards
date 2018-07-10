@@ -172,7 +172,7 @@ Hosting
 
 ### PHP version
 
-PHP version **must** be according to [WordPress recommendations](https://wordpress.org/about/requirements/), currently PHP 7.2 or greater.
+> PHP version **must** be according to [WordPress recommendations](https://wordpress.org/about/requirements/), currently PHP 7.2 or greater.
 
 ### Database version
 
