@@ -42,7 +42,6 @@ This document tries to outline an objective standard for what is required to be 
         * [SSL Encryption](#ssl-encryption)
         * [Secure passwords](#secure-passwords)
         * [Automatic Security Updates](#automatic-security-updates)
-        * [Database Tables](#database-tables)
         * [Admin username](#admin-username)
         * [Login attempt limit](#login-attempt-limit)
     * [WordPress functionality](#wordpress-functionality)
@@ -69,6 +68,10 @@ This document tries to outline an objective standard for what is required to be 
         * [Browser Caching](#browser-caching)
         * [Landing page redirects](#landing-page-redirects)
         * [Prioritize Visible Content](#prioritize-visible-content)
+* [Removed Items](#removed-items)
+    * [Outdated](#outdated)
+        * [Database Table Prefix](#database-table-prefix)
+        * [Hide WordPress Version](#hide-wordpress-version)
 
 <!-- /MarkdownTOC -->
 
@@ -264,12 +267,6 @@ While this can be handled on a policy level, it still makes sense to enforce it.
 
 > Automatic Security Updates **must** be enabled.
 
-### Database Tables
-
-> Database tables **must** use a different prefix than _wp__.
-
-It might not stop an sophisticated threats, but because it is so simple to do, there is no reason to not do it.
-
 ### Admin username
 
 > There **must** be no user with the user name admin.
@@ -421,3 +418,27 @@ The ideal solution is to do this on the server level, but using a cache plugin c
 > The size of the data that is needed to render the above-the-fold content of the page **should** be [limited](https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent).
 
 `PageSpeed`
+
+Removed Items
+=============
+
+The following items has been removed from the standard, but is kept as a reference.
+
+Outdated
+--------
+
+### Database Table Prefix
+
+> Database tables **must** use a different prefix than _wp__.
+
+`Outdated`
+
+There is no reason to hide change the database prefix. [Hackers are more clever than that](https://www.wordfence.com/blog/2016/12/wordpress-table-prefix/).
+
+### Hide WordPress Version
+
+> The meta generator tag which includes Wordpress version **must** be hidden.
+
+`Outdated`
+
+This is not needed because you should always have an updated version of Wordpress. Also, [hiding the version doesn't really help](https://www.wpwhitesecurity.com/wordpress-security/hide-wordpress-version-does-it-matter/).
