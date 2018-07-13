@@ -11,6 +11,7 @@ This document tries to outline an objective standard for what is required to be 
     * [Requirements vs recommendations](#requirements-vs-recommendations)
     * [Open standard - let us discuss!](#open-standard---let-us-discuss)
     * [WordPress.org and WordPress.com](#wordpressorg-and-wordpresscom)
+    * [Tags](#tags)
 * [A Great WordPress Website](#a-great-wordpress-website)
     * [Code](#code)
         * [Child theme](#child-theme)
@@ -55,16 +56,19 @@ This document tries to outline an objective standard for what is required to be 
         * [Privacy Policy](#privacy-policy)
     * [Page speed and optimization](#page-speed-and-optimization)
         * [Load time](#load-time)
+        * [Response Time](#response-time)
         * [Time to first byte](#time-to-first-byte)
         * [Request count](#request-count)
-        * [Mobile page weight](#mobile-page-weight)
+        * [Page weight](#page-weight)
         * [Image compression](#image-compression)
         * [Cache](#cache)
         * [Content Delivery Network](#content-delivery-network)
         * [Compression](#compression)
-        * [Render-blocking JavaScript](#render-blocking-javascript)
-        * [Minified JavaScript and CSS](#minified-javascript-and-css)
+        * [Render-blocking JavaScript and CSS](#render-blocking-javascript-and-css)
+        * [Minified resources](#minified-resources)
         * [Browser Caching](#browser-caching)
+        * [Landing page redirects](#landing-page-redirects)
+        * [Prioritize Visible Content](#prioritize-visible-content)
 
 <!-- /MarkdownTOC -->
 
@@ -104,6 +108,18 @@ WordPress.org and WordPress.com
 This document, and its author, is not affiliated with WordPress, other than being an enthusiastic user.
 
 [WordPress.org Plugin Repository Guidelines](https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/) and [WordPress.org Theme Repository Guidlines](https://make.wordpress.org/themes/handbook/review/required/) are not covered by this document, but as a keen reader you will find overlaps on certain points. Consider using the [Theme Checker](https://make.wordpress.org/themes/handbook/review/required/theme-check-plugin/) plugin to identify possible errors in your theme.
+
+Tags
+----
+
+Below each requirement there can be one or multiple tags. These tags are used to give an indication of where the requirement originates or which group it belongs too. The following tags are used:
+
+<dl>
+  <dt>Insdustry Benchmark</dt>
+  <dd>The industry page speed benchmark as presented by <a href="https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/">Think With Google</a>.</dd>
+  <dt>PageSpeed</dt>
+  <dd>The requirements originates from or is validated by Googles <a href="https://developers.google.com/speed/pagespeed/insights/">PageSpeed InSights tool</a> for checking website performance.</dd>
+</dl>
 
 A Great WordPress Website
 =========================
@@ -321,23 +337,39 @@ Some of the requirements below are based on the [industry benchmarks](https://ww
 
 > All pages on the website **must** load in less than 3 seconds on all devices on average.
 
+`Industry Benchmark`
+
+### Response Time
+
+> [Server response time](https://developers.google.com/speed/docs/insights/Server) **must** be under 200 ms.
+
+`PageSpeed`
+
 ### Time to first byte
 
 > Time to first byte **must** be less than 1.3 seconds.
+
+`Industry Benchmark`
 
 ### Request count
 
 > Number of requests **must** be less than 50.
 
-### Mobile page weight
+`Industry Benchmark`
 
-> The total size of a mobile webpage, **should** be less than 500 KB.
+### Page weight
+
+> The total size of a webpage, **should** be less than 500 KB.
+
+`Industry Benchmark`
 
 ### Image compression
 
-> Proper image compression functionality **should** be configured on the site.
+> Proper [image compression](https://developers.google.com/speed/docs/insights/OptimizeImages) functionality **must** be configured on the site.
 
-Consider removing the default JPEG image compression via a [custom](https://premium.wpmudev.org/blog/fix-jpeg-compression/) or [installable](https://wordpress.org/plugins/disable-jpeg-compression/) plugin, and then add a third-party lossless compression plugin like
+`PageSpeed`
+
+Consider removing the default JPEG image compression via a [custom](https://premium.wpmudev.org/blog/fix-jpeg-compression/) or [installable](https://wordpress.org/plugins/disable-jpeg-compression/) plugin, and then add a third-party lossless compression plugin like:
 
 * [reSmush.it](https://wordpress.org/plugins/resmushit-image-optimizer/)
 * [WP Smushit](https://wordpress.org/plugins/wp-smushit/)
@@ -356,16 +388,36 @@ The ideal solution is to do this on the server level, but using a cache plugin c
 
 ### Compression
 
-> Gzip compression **must** be enabled.
+> [Gzip compression](https://developers.google.com/speed/docs/insights/EnableCompression) **must** be enabled.
 
-### Render-blocking JavaScript
+`PageSpeed`
 
-> JavaScripts that are not critical to initial render **should** be made asynchronous or deferred until after the first render.
+### Render-blocking JavaScript and CSS
 
-### Minified JavaScript and CSS
+> JavaScripts that are not critical to initial render **should** be made [asynchronous or deferred](https://developers.google.com/speed/docs/insights/BlockingJS) until after the first render. CSS delivery **should** be [optimized](https://developers.google.com/speed/docs/insights/OptimizeCSSDelivery).
 
-> All JavaScript and CSS **must** be minified.
+`PageSpeed`
+
+### Minified resources
+
+> All HTML, JavaScript and CSS **must** be [minified](https://developers.google.com/speed/docs/insights/MinifyResources).
+
+`PageSpeed`
 
 ### Browser Caching
 
-> Each resource served **must** specify an explicit caching policy.
+> Each resource served **must** specify an [explicit caching policy](https://developers.google.com/speed/docs/insights/LeverageBrowserCaching).
+
+`PageSpeed`
+
+### Landing page redirects
+
+> There **must** be no [landing page redirects](https://developers.google.com/speed/docs/insights/AvoidRedirects).
+
+`PageSpeed`
+
+### Prioritize Visible Content
+
+> The size of the data that is needed to render the above-the-fold content of the page **should** be [limited](https://developers.google.com/speed/docs/insights/PrioritizeVisibleContent).
+
+`PageSpeed`
