@@ -8,6 +8,8 @@ This document tries to outline an objective standard for what is required to be 
 
 * [About](#about)
     * [Purpose](#purpose)
+    * [Audience](#audience)
+    * [Considerations](#considerations)
     * [Requirements vs recommendations](#requirements-vs-recommendations)
     * [Open standard - let us discuss!](#open-standard---let-us-discuss)
     * [WordPress.org and WordPress.com](#wordpressorg-and-wordpresscom)
@@ -83,6 +85,26 @@ Purpose
 
 The purpose of the document is to help get rid of ambiguous phrases like “best practice”, and rather set a benchmark for what practices **must** be used to qualify to be a great WordPress website.
 I hope that it will help make agreements and communication between vendors and clients simpler. By having an objective standard, it will be easier for vendors to show clients that they are doing quality work, while clients can be confident in what they receive.
+
+Audience
+--------
+
+This document is intended for persons involved in setting up or auditing WordPress websites.
+
+Considerations
+--------------
+
+Building web pages is a craft: It requires hard work that involves many decisions and considerations. This standard aimes to be objective and presents itself as a list of rules stated as facts. While I believe that all the items of this list are warranted and based on reliable sources and commonly agreed upon practices, there is still room for interpretation and/or variations on the topics presented. Be aware that there might be sites or projects where some or many of the requirements are not justified or needed.
+
+Some of the items on this list are very specific about the practices and tools that must be used to solve certain problems. For example, modifications to premade themes must allways be done in a child theme. This is a commonly acknowledged practice, and therefore belongs in this list. This document intentionally does not cover subjects or areas where there are no commonly accepted practices or yardsticks to measure by. For example regarding third party code/functionality like:
+
+* use of premade themes
+* limitation of number of plugins on a site
+* use of page builders
+
+It is very hard to state commonly accepted guidelines for these kinds of topics, but there are som ground rules that should be applied. Be mindful about pros and cons of different solutions while building a site. Use plugins wisely and only when actually needed. Be aware that they can hurt the performance or user experience on the site. Allways try, to the best of your abilitites, to vet any third party code before adding it. Evaluate aspects such as update frequency and code quality.
+
+Use this list as a reference, but be critical to it's contents. If you disagree or have suggestions to changes, don't hesitate to open an issue.
 
 Requirements vs recommendations
 -------------------------------
@@ -292,7 +314,7 @@ Having WordPress produce images of the right size is nice, but if there is no us
 
 ### Page templates
 
-> The site **should** include page templates that are page-builder ready.
+> The site **should** include page templates that are ready for layout designers like Gutenberg or page builders.
 
 This includes page templates that are wide (full content area/sidebars) and full-width (whole page).
 
