@@ -96,13 +96,13 @@ Considerations
 
 Building web pages is a craft: It requires hard work that involves many decisions and considerations. This standard aimes to be objective and presents itself as a list of rules stated as facts. While I believe that all the items of this list are warranted and based on reliable sources and commonly agreed upon practices, there is still room for interpretation and/or variations on the topics presented. Be aware that there might be sites or projects where some or many of the requirements are not justified or needed.
 
-Some of the items on this list are very specific about the practices and tools that must be used to solve certain problems. For example, modifications to premade themes must allways be done in a child theme. This is a commonly acknowledged practice, and therefore belongs in this list. This document intentionally does not cover subjects or areas where there are no commonly accepted practices or yardsticks to measure by. For example regarding third party code/functionality like:
+Some of the items on this list are very specific about the practices and tools that must be used to solve certain problems. For example, modifications to premade themes must always be done in a child theme. This is a commonly acknowledged practice, and therefore belongs in this list. This document intentionally does not cover subjects or areas where there are no commonly accepted practices or yardsticks to measure by. For example regarding third party code/functionality like:
 
 * use of premade themes
 * limitation of number of plugins on a site
 * use of page builders
 
-It is very hard to state commonly accepted guidelines for these kinds of topics, but there are som ground rules that should be applied. Be mindful about pros and cons of different solutions while building a site. Use plugins wisely and only when actually needed. Be aware that they can hurt the performance or user experience on the site. Allways try, to the best of your abilitites, to vet any third party code before adding it. Evaluate aspects such as update frequency and code quality.
+It is very hard to state commonly accepted guidelines for these kinds of topics, but there are some ground rules that should be applied. Be mindful about pros and cons of different solutions while building a site. Use plugins wisely and only when actually needed. Be aware that they can hurt the performance or user experience on the site. Always try, to the best of your abilities, to vet any third party code before adding it. Evaluate aspects such as update frequency and code quality.
 
 Use this list as a reference, but be critical to it's contents. If you disagree or have suggestions to changes, don't hesitate to open an issue.
 
@@ -132,7 +132,7 @@ WordPress.org and WordPress.com
 
 This document, and its author, is not affiliated with WordPress, other than being an enthusiastic user.
 
-[WordPress.org Plugin Repository Guidelines](https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/) and [WordPress.org Theme Repository Guidlines](https://make.wordpress.org/themes/handbook/review/required/) are not covered by this document, but as a keen reader you will find overlaps on certain points. Consider using the [Theme Checker](https://make.wordpress.org/themes/handbook/review/required/theme-check-plugin/) plugin to identify possible errors in your theme.
+[WordPress.org Plugin Repository Guidelines](https://developer.wordpress.org/plugins/wordpress-org/detailed-plugin-guidelines/) and [WordPress.org Theme Repository Guidelines](https://make.wordpress.org/themes/handbook/review/required/) are not covered by this document, but as a keen reader you will find overlaps on certain points. Consider using the [Theme Checker](https://make.wordpress.org/themes/handbook/review/required/theme-check-plugin/) plugin to identify possible errors in your theme.
 
 Tags
 ----
@@ -262,7 +262,7 @@ Search Engine Optimization
 
 ### Sitemap
 
-> The site **must** have an xml sitemap.
+> The site **must** have an XML sitemap.
 
 ### Breadcrumbs
 
@@ -277,7 +277,7 @@ Consider using the [WordPress Security Checklist](https://wpsecuritychecklist.or
 
 ### SSL Encryption
 
-> The site **must** have forced SSL encryption (https).
+> The site **must** have forced SSL encryption (HTTPS).
 
 ### Secure passwords
 
@@ -347,7 +347,7 @@ Page speed and optimization
 
 The most viable way to test for an optimized web page is to use automatic testers like
 [Google PageSpeed InSights](https://developers.google.com/speed/pagespeed/insights/),
-[Google Testmysite](https://testmysite.withgoogle.com/),
+[Google TestMySite](https://testmysite.withgoogle.com/),
 [GTmetrix](https://gtmetrix.com)
 or [Pingdom Website speed test](https://tools.pingdom.com/).
 Some of the requirements below are based on the [industry benchmarks](https://www.thinkwithgoogle.com/marketing-resources/data-measurement/mobile-page-speed-new-industry-benchmarks/) from Think With Google.
@@ -459,8 +459,8 @@ There is no reason to hide change the database prefix. [Hackers are more clever 
 
 ### Hide WordPress Version
 
-> The meta generator tag which includes Wordpress version **must** be hidden.
+> The meta generator tag which includes WordPress version **must** be hidden.
 
 `Outdated`
 
-This is not needed because you should always have an updated version of Wordpress. Also, [hiding the version doesn't really help](https://www.wpwhitesecurity.com/wordpress-security/hide-wordpress-version-does-it-matter/).
+This is not needed because you should always have an updated version of WordPress. Also, [hiding the version doesn't really help](https://www.wpwhitesecurity.com/wordpress-security/hide-wordpress-version-does-it-matter/).
