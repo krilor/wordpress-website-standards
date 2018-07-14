@@ -184,7 +184,9 @@ Page responsiveness has to be tested on actual devices by actual people, but **s
 
 ### Accessibility
 
-> Site markup **must** be accessible.
+> The site **must** be according to [WCAG 2.0 AA](https://www.w3.org/TR/WCAG20/) guidelines.
+
+This is the same guidelines that [WordPress core uses](https://make.wordpress.org/accessibility/handbook/test-for-web-accessibility/#what-are-the-guidelines). Check out the [WordPress Accessibility Handbook](https://make.wordpress.org/accessibility/handbook/) for tips on how to make the site accessible.
 
 ### WordPress Coding Standards
 
