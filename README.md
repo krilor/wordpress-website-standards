@@ -7,6 +7,7 @@ This document tries to outline an objective standard for what is required to be 
 <!-- MarkdownTOC autolink="true" bullets="*" indent="    " -->
 
 * [About](#about)
+    * [Version](#version)
     * [Purpose](#purpose)
     * [Audience](#audience)
     * [Considerations](#considerations)
@@ -80,6 +81,17 @@ This document tries to outline an objective standard for what is required to be 
 About
 =====
 
+Version
+-------
+
+`0.1.0`
+
+* Changes are outlined in the [changelog](CHANGELOG.md).
+* Previous versions check [releases](https://github.com/krilor/wordpress-website-standards/releases).
+* New version under work is in the [develop branch](https://github.com/krilor/wordpress-website-standards/tree/develop).
+
+Of course, you can always have a look at the [commit history](https://github.com/krilor/wordpress-website-standards/commits/master).
+
 Purpose
 -------
 
@@ -116,16 +128,7 @@ In broad strokes, this divides a basic standard from a gold standard. The requir
 Open standard - let us discuss!
 -------------------------------
 
-Please help me hone this standard so that it can serve as a reference for everyone that is using WordPress to power their websites. Open a new issue or submit a pull request to get the discussion going. When helping out, please consider the following guidelines for this document.
-
-* Each requirement or recommendation **should** have it’s own short level three headline
-    * Remember to update the Table of Contents. It's set up to use [Sublime3 MarkdownTOC](https://github.com/naokazuterada/MarkdownTOC)
-* The actual requirement or recommendation **must** follow directly after the headline as a quote, and contain either of the words “must” or “should” in bold to make it clear whether it is a requirement or recommendation.
-* After the quote there can be text or images that describes why the requirement **should** be met, and how.
-* The standard **should** be as short as possible, but descriptive enough to be unambiguous.
-* Refer to pillar content other places on the web rather than including in this documents.
-* Refer to WordPress documentation whenever possible.
-* Try to think about the testability of requirements.
+Please help me hone this standard so that it can serve as a reference for everyone that is using WordPress to power their websites. Open a new issue or submit a pull request to get the discussion going. If you want to help out, check the [contributing information](CONTRIBUTING.md).
 
 WordPress.org and WordPress.com
 -------------------------------
