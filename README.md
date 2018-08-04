@@ -11,7 +11,7 @@ This document tries to outline an objective standard for what is required to be 
     * [Purpose](#purpose)
     * [Audience](#audience)
     * [Considerations](#considerations)
-    * [Requirements vs recommendations](#requirements-vs-recommendations)
+    * [Required vs recommended vs optional](#required-vs-recommended-vs-optional)
     * [Open standard - let us discuss!](#open-standard---let-us-discuss)
     * [WordPress.org and WordPress.com](#wordpressorg-and-wordpresscom)
     * [Tags](#tags)
@@ -118,12 +118,14 @@ It is very hard to state commonly accepted guidelines for these kinds of topics,
 
 Use this list as a reference, but be critical to it's contents. If you disagree or have suggestions to changes, don't hesitate to open an issue.
 
-Requirements vs recommendations
+Required vs recommended vs optional
 -------------------------------
 
-This document distinguishes between what is required and what is recommended for WordPress site deliveries. Each item in this list is either something that **must** be implemented or something that **should** be implemented, where **should** denotes recommendations.
+This document distinguishes between what is required, recommended and optional for WordPress site deliveries. This is done through wording in each item.
 
-In broad strokes, this divides a basic standard from a gold standard. The requirements are what needs to be met to deliver a good site, and the recommendations will push that even further.
+> The key words "must", "must not", "required", "shall", "shall not", "should", "should not", "recommended",  "may", and "optional" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
+
+In broad strokes, requirements and recommendations divides a basic standard from a gold standard. The requirements are what needs to be met to deliver a good site, and the recommendations will push that even further.
 
 Open standard - let us discuss!
 -------------------------------
