@@ -181,6 +181,18 @@ Refer to the [Theme Handbook](https://developer.wordpress.org/themes/advanced-to
 
 > The site **should** have proper print styles.
 
+There are no established best practices when it comes to print stylesheets, but the general guideline is to make make content useful and save ink. Consider what content is the most likely content to be printed, for example purchase receipts and other reference data.
+Modern browsers will let you emulate print, for example [Chrome](https://developers.google.com/web/tools/chrome-devtools/css/reference#print-mode) or [Firefox](https://stackoverflow.com/a/28873496).
+Consider the following practices
+
+* Hide unwanted content such as headers and footers
+* Don't print background images or colors
+* Controlling page breaks
+* [Show URLs after links](https://davidwalsh.name/optimize-your-links-for-print-using-css-show-url)
+* Show title of _abbr_ and _acronym_ tags
+* Swap to a serif font
+* [Adding QR code for easy reference](https://www.smashingmagazine.com/2013/03/tips-and-tricks-for-print-style-sheets/#print-qr-codes-for-easy-url-references)
+
 ### Responsiveness
 
 > All pages on the site **must** be responsive to work on devices off all sizes.
