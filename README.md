@@ -51,6 +51,7 @@ This document tries to outline an objective standard for what is required to be 
         * [File editor](#file-editor)
         * [XML-RPC](#xml-rpc)
         * [\(S\)FTP](#sftp)
+        * [Database user](#database-user)
     * [WordPress functionality](#wordpress-functionality)
         * [Media image sizes](#media-image-sizes)
         * [Editor styles](#editor-styles)
@@ -318,7 +319,8 @@ While this can be handled on a policy level, it still makes sense to enforce it.
 
 > The site **must** have a limit for failed login attempts.
 
-Multiple plugins provide this functionality, including [Wordfence](https://wordpress.org/plugins/wordfence/).
+Multiple plugins provide this functionality, including [Wordfence](https://wordpress.org/plugins/wordfence/), but it might also be a good idea to do it on the server level with something like [fail2ban](https://bjornjohansen.no/using-fail2ban-with-wordpress).
+
 
 ### Login url
 
@@ -341,6 +343,10 @@ Disable it to decrease the attach surface. It could expose you to [amplified bru
 ### (S)FTP
 
 > FTP **should** not be allowed on the server, only SFTP.
+
+### Database user
+
+> The database user **should** only have the required grants.
 
 WordPress functionality
 -----------------------
@@ -384,6 +390,7 @@ Also, consider tracking which urls are most frequently returning 404, using a pl
 ### Privacy Policy
 
 > A privacy policy page **must** be created, added to the privacy policy setting and displayed on all pages on the website.
+
 
 Page speed and optimization
 ---------------------------
