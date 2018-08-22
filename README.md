@@ -47,6 +47,12 @@ This document tries to outline an objective standard for what is required to be 
         * [Automatic Security Updates](#automatic-security-updates)
         * [Admin username](#admin-username)
         * [Login attempt limit](#login-attempt-limit)
+        * [Login url](#login-url)
+        * [File editor](#file-editor)
+        * [\(S\)FTP](#sftp)
+        * [Database user](#database-user)
+        * [IP restrictions](#ip-restrictions)
+        * [File permissions](#file-permissions)
     * [WordPress functionality](#wordpress-functionality)
         * [Media image sizes](#media-image-sizes)
         * [Editor styles](#editor-styles)
@@ -75,6 +81,7 @@ This document tries to outline an objective standard for what is required to be 
     * [Outdated](#outdated)
         * [Database Table Prefix](#database-table-prefix)
         * [Hide WordPress Version](#hide-wordpress-version)
+        * [XML-RPC](#xml-rpc)
 
 <!-- /MarkdownTOC -->
 
@@ -314,7 +321,36 @@ While this can be handled on a policy level, it still makes sense to enforce it.
 
 > The site **must** have a limit for failed login attempts.
 
-Multiple plugins provide this functionality, including [Wordfence](https://wordpress.org/plugins/wordfence/).
+Multiple plugins provide this functionality, including [Wordfence](https://wordpress.org/plugins/wordfence/), but it might also be a good idea to do it on the server level with something like [fail2ban](https://bjornjohansen.no/using-fail2ban-with-wordpress).
+
+
+### Login url
+
+> The site **should** not have the standard login url.
+
+Login url should be changed because it can stop unsophisticated attacks and also might limit the server load from such attack. Automated attacks might just head-on-over to the next site if `wp-login.php` returns a 404.
+
+### File editor
+
+> The theme and plugin file editor **should** be disabled.
+
+Unless there is a really good reason for having these enabled, `DISALLOW_FILE_EDIT` should be set.
+
+### (S)FTP
+
+> FTP **should** not be allowed on the server, only SFTP.
+
+### Database user
+
+> The database user **should** only have the required grants.
+
+### IP restrictions
+
+> The site **should** have restricted access to WordPress admin to a few whitelisted IPs
+
+### File permissions
+
+> The file permissons on the server **should** be only what WordPress needs, not any more.
 
 WordPress functionality
 -----------------------
@@ -481,3 +517,10 @@ There is no reason to hide change the database prefix. [Hackers are more clever 
 `Outdated`
 
 This is not needed because you should always have an updated version of WordPress. Also, [hiding the version doesn't really help](https://www.wpwhitesecurity.com/wordpress-security/hide-wordpress-version-does-it-matter/).
+
+### XML-RPC
+
+> If it is not in use, XML-RPC **must** be disabled.
+
+Old tales has it that you could be exposed to [amplified brute force attacks](https://blog.sucuri.net/2015/10/brute-force-amplification-attacks-against-wordpress-xmlrpc.html) and be used in [herding your site into a botnet for DDoS](https://www.incapsula.com/blog/wordpress-security-alert-pingback-ddos.html).
+Brute force attacks should be fended with login limits, and the botnet hack is not very effective anyways.
