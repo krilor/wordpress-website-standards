@@ -6,7 +6,7 @@ This document covers how do [pull requests](https://help.github.com/articles/abo
 
 # Branching and pull requests
 
-I'm trying to use [gitflow as explained by Vincent Driessen](https://nvie.com/posts/a-successful-git-branching-model/) in this project. For you, as a contributor, that simply means that **all pull requests a has to go into the [develop branch](https://github.com/krilor/wordpress-website-standards/tree/develop).**
+This project tries to use [github flow](https://guides.github.com/introduction/flow/). For you, as a contributor, that simply means that pull request goes directly into the master branch.
 
 Please try to be descriptive in both branch name, commits and pull request.
 
