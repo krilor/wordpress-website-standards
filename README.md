@@ -49,6 +49,7 @@ This document tries to outline an objective standard for what is required to be 
         * [Login attempt limit](#login-attempt-limit)
         * [Login url](#login-url)
         * [File editor](#file-editor)
+        * [XML-RPC](#xml-rpc)
     * [WordPress functionality](#wordpress-functionality)
         * [Media image sizes](#media-image-sizes)
         * [Editor styles](#editor-styles)
@@ -329,6 +330,12 @@ Login url should be changed because it can stop unsophisticated attacks and also
 > The theme and plugin file editor **should** be disabled.
 
 Unless there is a really good reason for having these enabled, `DISALLOW_FILE_EDIT` should be set.
+
+### XML-RPC
+
+> If it is not in use, XML-RPC **must** be disabled.
+
+Disable it to decrease the attach surface. It could expose you to [amplified brute force attacks](https://blog.sucuri.net/2015/10/brute-force-amplification-attacks-against-wordpress-xmlrpc.html) and be used in [herding your site into a botnet for DDoS](https://www.incapsula.com/blog/wordpress-security-alert-pingback-ddos.html).
 
 WordPress functionality
 -----------------------
