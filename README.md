@@ -52,6 +52,7 @@ This document tries to outline an objective standard for what is required to be 
         * [XML-RPC](#xml-rpc)
         * [\(S\)FTP](#sftp)
         * [Database user](#database-user)
+        * [IP restrictions](#ip-restrictions)
     * [WordPress functionality](#wordpress-functionality)
         * [Media image sizes](#media-image-sizes)
         * [Editor styles](#editor-styles)
@@ -348,6 +349,10 @@ Disable it to decrease the attach surface. It could expose you to [amplified bru
 
 > The database user **should** only have the required grants.
 
+### IP restrictions
+
+> The site **should** have restricted access to WordPress admin to a few whitelisted IPs
+
 WordPress functionality
 -----------------------
 
@@ -390,7 +395,6 @@ Also, consider tracking which urls are most frequently returning 404, using a pl
 ### Privacy Policy
 
 > A privacy policy page **must** be created, added to the privacy policy setting and displayed on all pages on the website.
-
 
 Page speed and optimization
 ---------------------------
