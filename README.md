@@ -84,13 +84,9 @@ About
 Version
 -------
 
-`0.1.0`
-
-* Changes are outlined in the [changelog](CHANGELOG.md).
-* Previous versions check [releases](https://github.com/krilor/wordpress-website-standards/releases).
-* New version under work is in the [develop branch](https://github.com/krilor/wordpress-website-standards/tree/develop).
-
-Of course, you can always have a look at the [commit history](https://github.com/krilor/wordpress-website-standards/commits/master).
+The master branch of this repo will contain the most up-to-date version of the standard. It might be between versions.
+If you need to reference a specific version of this document, then check out the [releases](https://github.com/krilor/wordpress-website-standards/releases).
+Feel free to browse trough the changes in the [commit log](https://github.com/krilor/wordpress-website-standards/commits/master).
 
 Purpose
 -------
