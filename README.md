@@ -47,6 +47,7 @@ This document tries to outline an objective standard for what is required to be 
         * [Automatic Security Updates](#automatic-security-updates)
         * [Admin username](#admin-username)
         * [Login attempt limit](#login-attempt-limit)
+        * [Login url](#login-url)
     * [WordPress functionality](#wordpress-functionality)
         * [Media image sizes](#media-image-sizes)
         * [Editor styles](#editor-styles)
@@ -315,6 +316,12 @@ While this can be handled on a policy level, it still makes sense to enforce it.
 > The site **must** have a limit for failed login attempts.
 
 Multiple plugins provide this functionality, including [Wordfence](https://wordpress.org/plugins/wordfence/).
+
+### Login url
+
+> The site **should** not have the standard login url.
+
+Login url should be changed because it can stop unsophisticated attacks and also might limit the server load from such attack. Automated attacks might just head-on-over to the next site if `wp-login.php` returns a 404.
 
 WordPress functionality
 -----------------------
