@@ -11,7 +11,7 @@ This document tries to outline an objective standard for what is required to be 
     * [Purpose](#purpose)
     * [Audience](#audience)
     * [Considerations](#considerations)
-    * [Requirements vs recommendations](#requirements-vs-recommendations)
+    * [Required vs recommended vs optional](#required-vs-recommended-vs-optional)
     * [Open standard - let us discuss!](#open-standard---let-us-discuss)
     * [WordPress.org and WordPress.com](#wordpressorg-and-wordpresscom)
     * [Tags](#tags)
@@ -118,12 +118,14 @@ It is very hard to state commonly accepted guidelines for these kinds of topics,
 
 Use this list as a reference, but be critical to it's contents. If you disagree or have suggestions to changes, don't hesitate to open an issue.
 
-Requirements vs recommendations
+Required vs recommended vs optional
 -------------------------------
 
-This document distinguishes between what is required and what is recommended for WordPress site deliveries. Each item in this list is either something that **must** be implemented or something that **should** be implemented, where **should** denotes recommendations.
+This document distinguishes between what is required, recommended and optional for WordPress site deliveries. This is done through wording in each item.
 
-In broad strokes, this divides a basic standard from a gold standard. The requirements are what needs to be met to deliver a good site, and the recommendations will push that even further.
+> The key words "must", "must not", "required", "shall", "shall not", "should", "should not", "recommended",  "may", and "optional" in this document are to be interpreted as described in [RFC 2119](https://tools.ietf.org/html/rfc2119).
+
+In broad strokes, requirements and recommendations divides a basic standard from a gold standard. The requirements are what needs to be met to deliver a good site, and the recommendations will push that even further.
 
 Open standard - let us discuss!
 -------------------------------
@@ -178,6 +180,18 @@ Refer to the [Theme Handbook](https://developer.wordpress.org/themes/advanced-to
 ### Print Stylesheet
 
 > The site **should** have proper print styles.
+
+There are no established best practices when it comes to print stylesheets, but the general guideline is to make make content useful and save ink. Consider what content is the most likely content to be printed, for example purchase receipts and other reference data.
+Modern browsers will let you emulate print, for example [Chrome](https://developers.google.com/web/tools/chrome-devtools/css/reference#print-mode) or [Firefox](https://stackoverflow.com/a/28873496).
+Consider the following practices
+
+* Hide unwanted content such as headers and footers
+* Don't print background images or colors
+* Controlling page breaks
+* [Show URLs after links](https://davidwalsh.name/optimize-your-links-for-print-using-css-show-url)
+* Show title of _abbr_ and _acronym_ tags
+* Swap to a serif font
+* [Adding QR code for easy reference](https://www.smashingmagazine.com/2013/03/tips-and-tricks-for-print-style-sheets/#print-qr-codes-for-easy-url-references)
 
 ### Responsiveness
 
