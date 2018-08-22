@@ -94,6 +94,8 @@ Purpose
 The purpose of the document is to help get rid of ambiguous phrases like “best practice”, and rather set a benchmark for what practices **must** be used to qualify to be a great WordPress website.
 I hope that it will help make agreements and communication between vendors and clients simpler. By having an objective standard, it will be easier for vendors to show clients that they are doing quality work, while clients can be confident in what they receive.
 
+The objective is also very close to that of the [WP Honor Code](https://wphonorcode.com/about/); to provide a tool that enables client and developers alike to have a great WordPress experience.
+
 Audience
 --------
 
