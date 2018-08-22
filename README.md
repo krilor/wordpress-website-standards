@@ -48,6 +48,7 @@ This document tries to outline an objective standard for what is required to be 
         * [Admin username](#admin-username)
         * [Login attempt limit](#login-attempt-limit)
         * [Login url](#login-url)
+        * [File editor](#file-editor)
     * [WordPress functionality](#wordpress-functionality)
         * [Media image sizes](#media-image-sizes)
         * [Editor styles](#editor-styles)
@@ -322,6 +323,12 @@ Multiple plugins provide this functionality, including [Wordfence](https://wordp
 > The site **should** not have the standard login url.
 
 Login url should be changed because it can stop unsophisticated attacks and also might limit the server load from such attack. Automated attacks might just head-on-over to the next site if `wp-login.php` returns a 404.
+
+### File editor
+
+> The theme and plugin file editor **should** be disabled.
+
+Unless there is a really good reason for having these enabled, `DISALLOW_FILE_EDIT` should be set.
 
 WordPress functionality
 -----------------------
