@@ -53,6 +53,7 @@ This document tries to outline an objective standard for what is required to be 
         * [\(S\)FTP](#sftp)
         * [Database user](#database-user)
         * [IP restrictions](#ip-restrictions)
+        * [File permissions](#file-permissions)
     * [WordPress functionality](#wordpress-functionality)
         * [Media image sizes](#media-image-sizes)
         * [Editor styles](#editor-styles)
@@ -352,6 +353,10 @@ Disable it to decrease the attach surface. It could expose you to [amplified bru
 ### IP restrictions
 
 > The site **should** have restricted access to WordPress admin to a few whitelisted IPs
+
+### File permissions
+
+> The file permissons on the server **should** be only what WordPress needs, not any more.
 
 WordPress functionality
 -----------------------
