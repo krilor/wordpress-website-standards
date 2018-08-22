@@ -49,7 +49,6 @@ This document tries to outline an objective standard for what is required to be 
         * [Login attempt limit](#login-attempt-limit)
         * [Login url](#login-url)
         * [File editor](#file-editor)
-        * [XML-RPC](#xml-rpc)
         * [\(S\)FTP](#sftp)
         * [Database user](#database-user)
         * [IP restrictions](#ip-restrictions)
@@ -82,6 +81,7 @@ This document tries to outline an objective standard for what is required to be 
     * [Outdated](#outdated)
         * [Database Table Prefix](#database-table-prefix)
         * [Hide WordPress Version](#hide-wordpress-version)
+        * [XML-RPC](#xml-rpc)
 
 <!-- /MarkdownTOC -->
 
@@ -336,12 +336,6 @@ Login url should be changed because it can stop unsophisticated attacks and also
 
 Unless there is a really good reason for having these enabled, `DISALLOW_FILE_EDIT` should be set.
 
-### XML-RPC
-
-> If it is not in use, XML-RPC **must** be disabled.
-
-Disable it to decrease the attach surface. It could expose you to [amplified brute force attacks](https://blog.sucuri.net/2015/10/brute-force-amplification-attacks-against-wordpress-xmlrpc.html) and be used in [herding your site into a botnet for DDoS](https://www.incapsula.com/blog/wordpress-security-alert-pingback-ddos.html).
-
 ### (S)FTP
 
 > FTP **should** not be allowed on the server, only SFTP.
@@ -523,3 +517,10 @@ There is no reason to hide change the database prefix. [Hackers are more clever 
 `Outdated`
 
 This is not needed because you should always have an updated version of WordPress. Also, [hiding the version doesn't really help](https://www.wpwhitesecurity.com/wordpress-security/hide-wordpress-version-does-it-matter/).
+
+### XML-RPC
+
+> If it is not in use, XML-RPC **must** be disabled.
+
+Old tales has it that you could be exposed to [amplified brute force attacks](https://blog.sucuri.net/2015/10/brute-force-amplification-attacks-against-wordpress-xmlrpc.html) and be used in [herding your site into a botnet for DDoS](https://www.incapsula.com/blog/wordpress-security-alert-pingback-ddos.html).
+Brute force attacks should be fended with login limits, and the botnet hack is not very effective anyways.
