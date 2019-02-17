@@ -46,6 +46,7 @@ This document tries to outline an objective standard for what is required to be 
         * [Secure passwords](#secure-passwords)
         * [Automatic Security Updates](#automatic-security-updates)
         * [Admin username](#admin-username)
+        * [User Enumeration](#user-enumeration)
         * [Login attempt limit](#login-attempt-limit)
         * [Login url](#login-url)
         * [File editor](#file-editor)
@@ -317,12 +318,17 @@ While this can be handled on a policy level, it still makes sense to enforce it.
 
 > There **must** be no user with the user name admin.
 
+### User Enumeration
+
+> The site **should** hide login usernames and prevent against user enumeration.
+
+Allowing [enumeration of usernames](https://www.hacksplaining.com/exercises/user-enumeration) is not a vulnerability in itself, but allowing hackers to know the login usernames makes other exploits easier to do. Enumeration can be prevented in [code or .htaccess](https://perishablepress.com/stop-user-enumeration-wordpress/).
+
 ### Login attempt limit
 
 > The site **must** have a limit for failed login attempts.
 
 Multiple plugins provide this functionality, including [Wordfence](https://wordpress.org/plugins/wordfence/), but it might also be a good idea to do it on the server level with something like [fail2ban](https://bjornjohansen.no/using-fail2ban-with-wordpress).
-
 
 ### Login url
 
